@@ -32,8 +32,8 @@ const findBoardGameById = (id) => {
           name: boardGame.name.find(name => name["$"].primary === "true")["_"],
           minPlayers: boardGame.minplayers[0],
           maxPlayers: boardGame.maxplayers[0],
-          imageUrl: `https:${boardGame.image[0]}`,
-          thumbUrl: `https:${boardGame.thumbnail[0]}`
+          imageUrl: boardGame.image ? `https:${boardGame.image[0]}` : '',
+          thumbUrl: boardGame.thumbnail ? `https:${boardGame.thumbnail[0]}` : ''
         });
       });
     });
