@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "dotenv": "^2.0.0",
+    "fb": "^1.1.1",
     "graphql": "^0.8.2",
     "graphql-server-koa": "^0.4.3",
     "koa": "2",
@@ -24,6 +26,7 @@
     "babel-preset-latest": "^6.16.0",
     "babel-register": "^6.18.0",
     "eslint": "^3.12.2",
+    "faker": "^3.1.0",
     "jasmine": "^2.5.2",
     "jasmine-core": "^2.5.2",
     "jasmine-sinon": "^0.4.0",
