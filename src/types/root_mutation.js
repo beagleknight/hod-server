@@ -5,8 +5,7 @@ import {
 } from 'graphql';
 
 import { UserType } from './user.js';
-
-import { facebookApi } from '../services/facebook_api.js';
+import { User }     from '../models/user.js';
 
 export const RootMutationType = new GraphQLObjectType({
   name: 'RootMutationType',
@@ -19,7 +18,7 @@ export const RootMutationType = new GraphQLObjectType({
         }
       },
       resolve(_, { token }) {
-        return facebookApi.getUserData(token);
+        return User.findOrCreateFromFacebook(token);
       }
     }
   }
